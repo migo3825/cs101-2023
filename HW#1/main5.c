@@ -5,7 +5,7 @@ int main()
     char a[]="-9 8 7 6 5 -4 3 -2 1";
     int i=4;
     int b=0, c=0, tmp=0, sign=1, end=0;
-    int length=sizeof(a)/sizeof(a[0])-1;
+    int length=(unsigned long)sizeof(a)-1;
     char arr[length/2];
     
     for (b; b<=length; b++)
