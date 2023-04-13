@@ -1,33 +1,29 @@
 #include <stdio.h>
 
-int multi (int i, int j)
+int multi(int i, int j)
 {
-    if (i==1)
+    if (i > 9)
     {
-        if (j==1)
-        {
-            printf("%d*%d=%-2d\n", i, j, i*j);
-        }
-        else
-        {
-            printf("%d*%d=%-2d\n", i, j-1, i*(j-1));
-        }
+        return 0;
     }
     else
     {
-        if (j==1)
+        if (j > 9)
         {
-            printf("%d*%d=%-2d\n", i, j, i*j);
+            printf("\n");
+            multi(i+1, 1);
+            return 0;
         }
         else
         {
-            printf("%d*%d=%-2d\n", i, j-1, i*(j-1));
+        printf("%d*%d=%-2d ", i, j, i*j);
+        multi(i, j+1);
         }
     }
 }
 
 int main()
 {
-    multi(9, 9);
+    multi(1, 1);
     return 0;
 }
